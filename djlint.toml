@@ -1,0 +1,3 @@
+[tool.djlint]
+indent = 4
+profile = "django"
