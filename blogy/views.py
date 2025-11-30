@@ -1,5 +1,15 @@
 from django.shortcuts import render
 
+from blog.models import Blog, Category
+
 
 def home(request):
-    return render(request, "home.html")
+    categories = Category.objects.all()
+    featured_blogs = Blog.objects.filter(is_featured=True, status="published").order_by(
+        "-created_at"
+    )[:5]
+    context = {
+        "categories": categories,
+        "featured_blogs": featured_blogs,
+    }
+    return render(request, "home.html", context)
