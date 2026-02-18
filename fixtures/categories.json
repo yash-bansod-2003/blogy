@@ -25,6 +25,24 @@
 			"created_at": "2026-02-10",
 			"updated_at": "2026-02-10"
 		}
+	},
+	{
+		"model": "blog.category",
+		"pk": 4,
+		"fields": {
+			"name": "Business",
+			"created_at": "2026-02-12",
+			"updated_at": "2026-02-12"
+		}
+	},
+	{
+		"model": "blog.category",
+		"pk": 5,
+		"fields": {
+			"name": "Food & Cooking",
+			"created_at": "2026-02-15",
+			"updated_at": "2026-02-15"
+		}
 	}
 ]
 

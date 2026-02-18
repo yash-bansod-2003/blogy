@@ -4,19 +4,17 @@
 <div class="container">
   <div class="row g-5">
     <div class="col-md-8">
+      {% if blog %}
       <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From the Firehose
+        From the <span class="text-decoration-underline text-warning">{{ blog.category.name }}</span> Category
       </h3>
+        <article class="blog-post mb-5">
+          <h2 class="blog-post-title mb-1">{{ blog.title }}</h2>
+          <p class="blog-post-meta">{{ blog.created_at }} by <a href="#">{{ blog.author.username }}</a></p>
 
-      {% for post in posts %}
-      <article class="blog-post mb-5">
-        <h2 class="blog-post-title mb-1">{{ post.title }}</h2>
-        <p class="blog-post-meta">{{ post.published_date }} by <a href="#">{{ post.author.username }}</a></p>
-
-        <p>{{ post.content|truncatewords:50 }}</p>
-        <a href="#">Read more...</a>
+        <p>{{ blog.content }}</p>
       </article>
-      {% endfor %}
+      {% endif %}
 
     </div>
 

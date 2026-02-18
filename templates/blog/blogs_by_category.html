@@ -15,7 +15,7 @@
                 <p class="blog-post-meta">{{ post.published_date }} by <a href="#">{{ post.author.username }}</a></p>
 
                 <p>{{ post.content|truncatewords:50 }}</p>
-                <a href="#">Read more...</a>
+                <a href="{% url 'blog_detail' post.slug %}">Read more...</a>
             </article>
             {% endfor %}
         {% else %}

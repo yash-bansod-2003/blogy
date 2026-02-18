@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from blog.models import Blog, Category
 from blogy.forms import RegisterForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib import auth
 
 def home(request):
     categories = Category.objects.all()
@@ -27,3 +29,18 @@ def register(request):
     else:
         form = RegisterForm()
     return render(request, "auth/register.html", {"form": form})
+
+def login(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
+            print(username, password)
+
+            user = auth.authenticate(username=username, password=password)
+            if user is not None:
+                auth.login(request, user)
+            return render(request, "home.html")
+    form = AuthenticationForm()
+    return render(request, "auth/login.html", {"form": form})
