@@ -125,7 +125,7 @@
       <nav class="nav nav-underline justify-content-between">
         <a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
         {% for category in categories %}
-        <a class="nav-item nav-link link-body-emphasis" href="#">
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'blogs_by_category' category.id %}">
           {{ category.name }}
         </a>
         {% endfor %}
