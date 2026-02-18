@@ -1,0 +1,54 @@
+[
+	{
+		"model": "blog.blog",
+		"pk": 1,
+		"fields": {
+			"title": "Introducing Django CI",
+			"slug": "introducing-django-ci",
+			"category": 1,
+			"author": 1,
+			"featured_image": "blog_images/django-ci.jpg",
+			"description": "A short introduction to setting up CI for Django projects.",
+			"content": "This post explains how to set up GitHub Actions to run migrations, tests, and build Docker images for a Django project.",
+			"status": "published",
+			"is_featured": true,
+			"created_at": "2026-02-12",
+			"updated_at": "2026-02-12"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 2,
+		"fields": {
+			"title": "Healthy Routines for Remote Developers",
+			"slug": "healthy-routines-remote-developers",
+			"category": 2,
+			"author": 1,
+			"featured_image": "blog_images/healthy-routines.jpg",
+			"description": "Tips to stay healthy while coding from home.",
+			"content": "Stand up regularly, take short walks, and keep a consistent sleep schedule. Ergonomics matter.",
+			"status": "published",
+			"is_featured": false,
+			"created_at": "2026-01-20",
+			"updated_at": "2026-02-01"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 3,
+		"fields": {
+			"title": "Backpacking in Kyoto",
+			"slug": "backpacking-in-kyoto",
+			"category": 3,
+			"author": 1,
+			"featured_image": "blog_images/kyoto.jpg",
+			"description": "A traveler's guide to Kyoto on a budget.",
+			"content": "Explore temples, try local food, and take scenic walking routes to discover hidden neighborhoods.",
+			"status": "draft",
+			"is_featured": false,
+			"created_at": "2026-02-08",
+			"updated_at": "2026-02-08"
+		}
+	}
+]
+
