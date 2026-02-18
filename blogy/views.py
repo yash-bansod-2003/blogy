@@ -26,4 +26,4 @@ def register(request):
             return render(request, "home.html")
     else:
         form = RegisterForm()
-        return render(request, "auth/register.html", {"form": form})
+    return render(request, "auth/register.html", {"form": form})

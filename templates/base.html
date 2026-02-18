@@ -105,7 +105,7 @@
   </style>
 </head>
 
-<body>
+<body class="flex flex-col">
   <div class="container">
     <header class="border-bottom lh-1 py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
@@ -133,9 +133,11 @@
     </div>
   </div>
 
-  {% block content %}
+  <main class="flex flex-1">
+    {% block content %}
 
-  {% endblock %}
+    {% endblock %}
+  </main>
 
   <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
     <p>
