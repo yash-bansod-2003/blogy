@@ -28,4 +28,5 @@ urlpatterns = [
     path("auth/register/", register, name="register"),
     path("auth/login/", login, name="login"),
     path("blog/", include("blog.urls")),
+    path("dashboard/", include("dashboard.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

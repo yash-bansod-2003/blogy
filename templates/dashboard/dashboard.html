@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row my-2">
+    <div class="col-md-3">
+      <div class="list-group">
+        <a href="{% url 'dashboard' %}" class="list-group-item list-group-item-action active">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action">Categories</a>
+         <a href="#" class="list-group-item list-group-item-action">Posts</a>
+        <a href="#" class="list-group-item list-group-item-action">Settings</a>
+      </div>
+    </div>
+    <div class="col-md-9">
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is your dashboard where you can manage your blog posts, categories, and settings.</p>
+
+        <div>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Categories</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Total Categories</h5>
+                        <p class="card-text">{{ categories_count }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Posts</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Total Posts</h5>
+                        <p class="card-text">{{ posts_count }}</p>
+                    </div>            
+                </div>
+            </div> 
+        </div>  
+        </div>
+    </div>
+</div>
+{% endblock %}
