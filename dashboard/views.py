@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from blog.models import Category, Blog
 from django.contrib.auth.decorators import login_required
+from dashboard.forms import CategoryForm
 
 @login_required(login_url='login')
 def dashboard(request):
@@ -18,6 +19,18 @@ def dashboard_categories(request):
         "categories": categories
     }
     return render(request, "dashboard/dashboard_categories.html", context)
+
+def dashboard_categories_add(request):
+    if request.method == "POST":
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = CategoryForm()
+    context = {
+        "form": form
+    }
+    return render(request, "dashboard/dashboard_categories_add.html", context)
 
 def dashboard_posts(request):
     posts = Blog.objects.all()
