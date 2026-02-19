@@ -32,6 +32,20 @@ def dashboard_categories_add(request):
     }
     return render(request, "dashboard/dashboard_categories_add.html", context)
 
+def dashboard_categories_edit(request, category_id):
+    category = Category.objects.get(id=category_id)
+    if request.method == "POST":
+        form = CategoryForm(request.POST, instance=category)
+        if form.is_valid():
+            form.save()
+    else:
+        form = CategoryForm(instance=category)
+    context = {
+        "form": form,
+        "category": category
+    }
+    return render(request, "dashboard/dashboard_categories_add.html", context)
+
 def dashboard_posts(request):
     posts = Blog.objects.all()
     context = {
