@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from blog.models import Blog, Category
 from blogy.forms import RegisterForm
@@ -44,3 +44,7 @@ def login(request):
             return render(request, "home.html")
     form = AuthenticationForm()
     return render(request, "auth/login.html", {"form": form})
+
+def logout(request):
+    auth.logout(request)
+    return redirect("home")    

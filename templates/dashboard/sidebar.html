@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row my-2">
+    <div class="col-md-3">
+      <div class="list-group">
+        <a href="{% url 'dashboard' %}" class="list-group-item list-group-item-action active">Dashboard</a>
+        <a href="{% url 'dashboard_categories' %}" class="list-group-item list-group-item-action">Categories</a>
+        <a href="{% url 'dashboard_posts' %}" class="list-group-item list-group-item-action">Posts</a>
+        <a href="#" class="list-group-item list-group-item-action">Settings</a>
+      </div>
+    </div>
+    {% block dashboard_content %}
+
+    {% endblock %}
+</div>
+{% endblock %}

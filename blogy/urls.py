@@ -20,13 +20,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from blogy.views import home, register, login
+from blogy.views import home, register, login, logout
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="home"),
     path("auth/register/", register, name="register"),
     path("auth/login/", login, name="login"),
+    path("auth/logout/", logout, name="logout"),
     path("blog/", include("blog.urls")),
     path("dashboard/", include("dashboard.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
