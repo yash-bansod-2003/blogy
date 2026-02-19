@@ -8,7 +8,7 @@ class BlogAdmin(admin.ModelAdmin):
     list_filter = ("status", "is_featured", "category")
     list_editable = ("status", "is_featured")
     search_fields = ("title", "description", "content")
-    # if we want to search by related model fields so we use double underscore
+    # if we want to search by related model fields so we use double underscore ("model__field")
     # search_fields = ("category__name")
     prepopulated_fields = {"slug": ("title",)}
     date_hierarchy = "created_at"

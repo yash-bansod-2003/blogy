@@ -1,0 +1,173 @@
+[
+	{
+		"model": "blog.blog",
+		"pk": 1,
+		"fields": {
+			"title": "Introducing Django CI",
+			"slug": "introducing-django-ci",
+			"category": 1,
+			"author": 1,
+			"featured_image": "blog_images/django-ci.jpg",
+			"description": "A short introduction to setting up CI for Django projects.",
+			"content": "This post explains how to set up GitHub Actions to run migrations, tests, and build Docker images for a Django project.",
+			"status": "published",
+			"is_featured": true,
+			"created_at": "2026-02-12",
+			"updated_at": "2026-02-12"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 2,
+		"fields": {
+			"title": "Healthy Routines for Remote Developers",
+			"slug": "healthy-routines-remote-developers",
+			"category": 2,
+			"author": 1,
+			"featured_image": "blog_images/healthy-routines.jpg",
+			"description": "Tips to stay healthy while coding from home.",
+			"content": "Stand up regularly, take short walks, and keep a consistent sleep schedule. Ergonomics matter.",
+			"status": "published",
+			"is_featured": false,
+			"created_at": "2026-01-20",
+			"updated_at": "2026-02-01"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 3,
+		"fields": {
+			"title": "Backpacking in Kyoto",
+			"slug": "backpacking-in-kyoto",
+			"category": 3,
+			"author": 1,
+			"featured_image": "blog_images/kyoto.jpg",
+			"description": "A traveler's guide to Kyoto on a budget.",
+			"content": "Explore temples, try local food, and take scenic walking routes to discover hidden neighborhoods.",
+			"status": "draft",
+			"is_featured": false,
+			"created_at": "2026-02-08",
+			"updated_at": "2026-02-08"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 4,
+		"fields": {
+			"title": "Advanced Python Async Programming",
+			"slug": "advanced-python-async-programming",
+			"category": 1,
+			"author": 1,
+			"featured_image": "blog_images/python-async.jpg",
+			"description": "Master asyncio and concurrent programming in Python.",
+			"content": "Learn about coroutines, await syntax, event loops, and how to write scalable asynchronous code for high-performance applications.",
+			"status": "published",
+			"is_featured": true,
+			"created_at": "2026-02-10",
+			"updated_at": "2026-02-14"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 5,
+		"fields": {
+			"title": "Growing Your Startup in 2026",
+			"slug": "growing-startup-2026",
+			"category": 4,
+			"author": 1,
+			"featured_image": "blog_images/startup-growth.jpg",
+			"description": "Key strategies for scaling your startup business this year.",
+			"content": "Explore fundraising options, team building, market expansion, and customer retention strategies that work in today's competitive landscape.",
+			"status": "published",
+			"is_featured": true,
+			"created_at": "2026-02-06",
+			"updated_at": "2026-02-11"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 6,
+		"fields": {
+			"title": "Mastering Web Scraping with BeautifulSoup",
+			"slug": "web-scraping-beautifulsoup",
+			"category": 1,
+			"author": 1,
+			"featured_image": "blog_images/web-scraping.jpg",
+			"description": "Extract data from websites efficiently and ethically.",
+			"content": "Discover how to use BeautifulSoup and requests library to build robust web scrapers while respecting robots.txt and rate limiting.",
+			"status": "published",
+			"is_featured": false,
+			"created_at": "2026-02-03",
+			"updated_at": "2026-02-07"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 7,
+		"fields": {
+			"title": "Simple Pasta Recipe for Beginners",
+			"slug": "simple-pasta-recipe",
+			"category": 5,
+			"author": 1,
+			"featured_image": "blog_images/pasta.jpg",
+			"description": "Learn to make delicious homemade pasta from scratch.",
+			"content": "Step-by-step guide to creating fresh pasta dough, mastering the pasta maker, and pairing with classic sauces.",
+			"status": "published",
+			"is_featured": false,
+			"created_at": "2026-02-09",
+			"updated_at": "2026-02-13"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 8,
+		"fields": {
+			"title": "Europe on a Shoestring Budget",
+			"slug": "europe-budget-travel",
+			"category": 3,
+			"author": 1,
+			"featured_image": "blog_images/europe-budget.jpg",
+			"description": "Practical tips for traveling across Europe cheaply.",
+			"content": "Find affordable accommodations, use public transport, eat like locals, and discover free attractions to maximize your European adventure.",
+			"status": "published",
+			"is_featured": false,
+			"created_at": "2026-02-02",
+			"updated_at": "2026-02-05"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 9,
+		"fields": {
+			"title": "Building a Personal Brand Online",
+			"slug": "personal-brand-online",
+			"category": 4,
+			"author": 1,
+			"featured_image": "blog_images/personal-brand.jpg",
+			"description": "Establish yourself as a thought leader in your field.",
+			"content": "Develop your unique value proposition, create consistent content, engage with your audience, and leverage social media strategically.",
+			"status": "draft",
+			"is_featured": false,
+			"created_at": "2026-02-14",
+			"updated_at": "2026-02-14"
+		}
+	},
+	{
+		"model": "blog.blog",
+		"pk": 10,
+		"fields": {
+			"title": "Mindfulness Meditation for Busy Professionals",
+			"slug": "mindfulness-meditation",
+			"category": 2,
+			"author": 1,
+			"featured_image": "blog_images/meditation.jpg",
+			"description": "Quick meditation techniques to reduce stress and boost productivity.",
+			"content": "Discover 5-minute meditation routines, breathing techniques, and apps that help you maintain mental clarity during high-stress work days.",
+			"status": "published",
+			"is_featured": false,
+			"created_at": "2026-02-04",
+			"updated_at": "2026-02-08"
+		}
+	}
+]
+

@@ -105,7 +105,7 @@
   </style>
 </head>
 
-<body>
+<body class="flex flex-col">
   <div class="container">
     <header class="border-bottom lh-1 py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
@@ -116,8 +116,13 @@
           <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Blogy</a>
         </div>
         <div class="col-4 gap-2 d-flex justify-content-end align-items-center">
-          <a class="btn btn-sm btn-primary" href="#">Sign in</a>
-          <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          {% if user.is_authenticated %}
+            <span class="text-body-secondary">Welcome, {{ user.username }}!</span>
+            <a class="btn btn-sm btn-outline-secondary" href="{% url 'logout' %}">Logout</a>
+          {% else %}
+            <a class="btn btn-sm btn-primary" href="{% url 'login' %}">Sign in</a>
+            <a class="btn btn-sm btn-outline-secondary" href="{% url 'register' %}">Sign up</a>
+          {% endif %}
         </div>
       </div>
     </header>
@@ -125,7 +130,7 @@
       <nav class="nav nav-underline justify-content-between">
         <a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
         {% for category in categories %}
-        <a class="nav-item nav-link link-body-emphasis" href="#">
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'blogs_by_category' category.id %}">
           {{ category.name }}
         </a>
         {% endfor %}
@@ -133,9 +138,11 @@
     </div>
   </div>
 
-  {% block content %}
+  <main class="flex flex-1">
+    {% block content %}
 
-  {% endblock %}
+    {% endblock %}
+  </main>
 
   <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
     <p>
