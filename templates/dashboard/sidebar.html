@@ -5,9 +5,9 @@
   <div class="row my-2">
     <div class="col-md-3">
       <div class="list-group">
-        <a href="{% url 'dashboard' %}" class="list-group-item list-group-item-action active">Dashboard</a>
-        <a href="{% url 'dashboard_categories' %}" class="list-group-item list-group-item-action">Categories</a>
-        <a href="{% url 'dashboard_posts' %}" class="list-group-item list-group-item-action">Posts</a>
+        <a href="{% url 'dashboard' %}" class="list-group-item list-group-item-action {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">Dashboard</a>
+        <a href="{% url 'dashboard_categories' %}" class="list-group-item list-group-item-action {% if request.resolver_match.url_name == 'dashboard_categories' %}active{% endif %}">Categories</a>
+        <a href="{% url 'dashboard_posts' %}" class="list-group-item list-group-item-action {% if request.resolver_match.url_name == 'dashboard_posts' %}active{% endif %}">Posts</a>
         <a href="#" class="list-group-item list-group-item-action">Settings</a>
       </div>
     </div>
